@@ -3,7 +3,6 @@
 @import 'normalize';
 @import 'layout';
 @import 'component-styling';
-@import 'pages/page-basis';
 
 // /* Components */
 // @import "components/form_field";
@@ -13,4 +12,5 @@
 @import 'sections/links';
 
 /* Pages / Views */
+@import 'pages/page-basis';
 @import 'pages/general-dashboard';

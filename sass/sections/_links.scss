@@ -16,6 +16,34 @@
 
 			td:last-child {
 				transform: translateX(25px);
+				position: relative;
+
+				.link-icons {
+					position: absolute;
+					right: 40px;
+					top: 0;
+
+					a {
+						display: none;
+						padding-right: 2px;
+						line-height: 58px;
+						color: $main-text-color;
+
+						&:hover {
+							color: $brand-color;
+						}
+
+						i {
+							font-size: $header-font-size;
+						}
+					}
+				}
+			}
+
+			&:hover {
+				td:last-child .link-icons a {
+					display: inline-block;
+				}
 			}
 		}
 	}
