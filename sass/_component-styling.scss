@@ -19,14 +19,11 @@ section {
 	&:hover {
 		box-shadow: 0 0 12px 0 rgba(0,0,0,.08);
 	}
-
-	&:first-of-type {
-		margin-top: 78px;
-	}
 }
 
 .section-content {
-	max-width: 684px;
+	max-width: 714px;
+	padding: 0 15px;
 }
 
 h1, 
@@ -188,11 +185,13 @@ i {
 
 .btn-lg {
 	padding: 20px 30px;
+	height: auto;
 }
 
 .btn-sm {
 	padding: 5px 10px;
 	font-size: 0.75em;
+	height: auto;
 }
 
 
@@ -227,6 +226,9 @@ table {
 	}
 }
 
+.table-container {
+	overflow-x: auto;
+}
 
 
 
@@ -256,7 +258,8 @@ textarea {
 	line-height: 40px;
 	padding: 0 15px;
 	margin: 15px 5px;
-	width: 325px;
+	width: 100%;
+	max-width: 325px;
 	border-radius: 3px;
 	outline: none;
 	background-color: $background-section-color;

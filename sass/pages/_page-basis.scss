@@ -2,14 +2,10 @@ aside {
 	
 	.sidebar-container {
 		position: fixed;
+		background-color: $aside-background;
+		z-index: 9999;
 		left: 0;
 		top: 0;
-		background-color: $aside-background;
-		height: 100vh;
-		z-index: 9999;
-		flex: 0 0 14.7%;
-		width: 14.7%;
-		overflow: auto;
 	}
 
 	.active {
@@ -21,7 +17,19 @@ aside {
 	}
 
 	img {
-		margin: 18px 18px 14px;
+		margin: 18px 7px 14px 18px;
+		display: inline-block;
+	}
+
+	.dropdown-button {
+		display: inline-block;
+		float: right;
+		margin: 17px 7px 0 0;
+		font-weight: 900;
+		font-size: 23px;
+		font-style: normal;
+		color: $main-text-color;
+		cursor: pointer;
 	}
 
 	ul {
@@ -64,7 +72,7 @@ aside {
 
 
 	.manager-profile {	
-		padding: 25px 18px;
+		padding: 25px 18px 50px;
 
 		h2 {
 			padding-left: 3px;
@@ -109,30 +117,29 @@ aside {
 	}
 }
 
+
+//				TOP MENU			//
+
+
 header {
 	width: 100%;
-	height: 61px;
 	background-color: $background-section-color;
 	border-bottom: 1px solid $disabled-text-color;
-	float: right;
-	position: fixed;
-	right: 0;
-	z-index: 9998;
 
 	ul {
-		text-align: right;
+		text-align: center;
 		font-size: 0;
 
 		li {
-			display: inline-block;
+			display: block;
     		vertical-align: top;
 			height: 100%;
 			line-height: 60px;
-			border-left: 1px solid $disabled-text-color;
 			padding-top: 0;
 			padding-bottom: 0;
 			font-size: $paragraph-font-size;
 			cursor: pointer;
+			border-bottom: 1px solid $disabled-text-color;
 
 			&:hover {
 				background-color: $background-main-color;
@@ -150,7 +157,6 @@ header {
 				position: relative;
 
 				.wallet-dropdown {
-					position: absolute;
 					width: calc(100% + 2px);
 					height: 120px;
 					left: -1px;
@@ -195,12 +201,85 @@ header {
 
 
 
-@media (min-width: 992px) {
 
+
+
+
+
+//			MOBILE RESPONSIBILITY			//
+
+@media (max-width: 768px) {
+
+	.side-menu {
+		display: none;
+
+		&.show {
+			display: block;
+		}
+	}
+
+	.sidebar-container {
+		width: 100%;
+	}
+
+	header {
+		margin-top: 58px;
+	}
+}
+
+@media (min-width: 768px) {
+
+	section:first-of-type {
+		margin-top: 78px;
+	}
+
+	.page-wrapper {
+		aside.sidebar {
+
+			.sidebar-container {
+				position: fixed;
+				height: 100vh;
+
+				.dropdown-button {
+					display: none;
+				}
+			}
+		}
+
+		header {
+			height: 61px;
+			float: right;
+			right: 0;
+			z-index: 9998;
+			position: fixed;
+
+			ul {
+				text-align: right;
+			
+				li {
+					display: inline-block;
+					border-left: 1px solid $disabled-text-color;
+					border-bottom: none;
+
+					&.wallet .wallet-dropdown {
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
 	.page-wrapper {
 		aside.sidebar {
 			flex: 0 0 14.7%;
 			max-width: 14.7%;
+
+			.sidebar-container {
+				flex: 0 0 14.7%;
+				width: 14.7%;
+			}
 		}
 
 		div.main-site {

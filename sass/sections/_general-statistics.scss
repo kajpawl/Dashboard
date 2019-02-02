@@ -2,14 +2,6 @@
 
 	.table-figures {
 
-		.figures-left {
-			padding-right: 34px;
-		}
-
-		.figures-right {
-			padding-left: 34px;
-		}
-
 		table {
 
 			tr {
@@ -73,6 +65,22 @@
 			vertical-align: middle;
 			padding: 2px 0 53px;
 			overflow-x: auto;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.statistics {
+
+		.table-figures {
+
+			.figures-left {
+				padding-right: 34px;
+			}
+
+			.figures-right {
+				padding-left: 34px;
+			}
 		}
 	}
 }

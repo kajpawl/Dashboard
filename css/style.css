@@ -639,12 +639,9 @@ section:hover {
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08);
 }
 
-section:first-of-type {
-  margin-top: 78px;
-}
-
 .section-content {
-  max-width: 684px;
+  max-width: 714px;
+  padding: 0 15px;
 }
 
 h1,
@@ -796,11 +793,13 @@ i {
 
 .btn-lg {
   padding: 20px 30px;
+  height: auto;
 }
 
 .btn-sm {
   padding: 5px 10px;
   font-size: 0.75em;
+  height: auto;
 }
 
 table {
@@ -833,6 +832,10 @@ table.list {
   padding: 0;
 }
 
+.table-container {
+  overflow-x: auto;
+}
+
 .layer {
   position: absolute;
   top: 0;
@@ -856,7 +859,8 @@ textarea {
   line-height: 40px;
   padding: 0 15px;
   margin: 15px 5px;
-  width: 325px;
+  width: 100%;
+  max-width: 325px;
   border-radius: 3px;
   outline: none;
   background-color: #fff;
@@ -937,14 +941,6 @@ textarea {
 }
 
 /* Sections */
-.statistics .table-figures .figures-left {
-  padding-right: 34px;
-}
-
-.statistics .table-figures .figures-right {
-  padding-left: 34px;
-}
-
 .statistics .table-figures table tr:hover {
   background-color: inherit;
 }
@@ -1000,6 +996,15 @@ textarea {
   overflow-x: auto;
 }
 
+@media (min-width: 768px) {
+  .statistics .table-figures .figures-left {
+    padding-right: 34px;
+  }
+  .statistics .table-figures .figures-right {
+    padding-left: 34px;
+  }
+}
+
 .links {
   padding-bottom: 5px;
 }
@@ -1017,21 +1022,14 @@ textarea {
   border-top: 1px solid #E3E3E3;
 }
 
-.links table tr td:last-child {
-  transform: translateX(25px);
-  position: relative;
-}
-
 .links table tr td:last-child .link-icons {
-  position: absolute;
-  right: 40px;
-  top: 0;
+  display: block;
 }
 
 .links table tr td:last-child .link-icons a {
-  display: none;
+  display: inline-block;
   padding-right: 2px;
-  line-height: 58px;
+  padding-top: 10px;
   color: #979797;
 }
 
@@ -1047,18 +1045,33 @@ textarea {
   display: inline-block;
 }
 
+@media (min-width: 768px) {
+  .table-container {
+    overflow: hidden;
+  }
+  .table-container table tr td:last-child {
+    transform: translateX(25px);
+    position: relative;
+  }
+  .table-container table tr td:last-child .link-icons {
+    position: absolute;
+    right: 40px;
+    top: 0;
+  }
+  .table-container table tr td:last-child .link-icons a {
+    display: none;
+    line-height: 58px;
+    padding-top: 0;
+  }
+}
+
 /* Pages / Views */
 aside .sidebar-container {
   position: fixed;
+  background-color: #191919;
+  z-index: 9999;
   left: 0;
   top: 0;
-  background-color: #191919;
-  height: 100vh;
-  z-index: 9999;
-  -ms-flex: 0 0 14.7%;
-      flex: 0 0 14.7%;
-  width: 14.7%;
-  overflow: auto;
 }
 
 aside .active {
@@ -1070,7 +1083,19 @@ aside .company-logo {
 }
 
 aside img {
-  margin: 18px 18px 14px;
+  margin: 18px 7px 14px 18px;
+  display: inline-block;
+}
+
+aside .dropdown-button {
+  display: inline-block;
+  float: right;
+  margin: 17px 7px 0 0;
+  font-weight: 900;
+  font-size: 23px;
+  font-style: normal;
+  color: #979797;
+  cursor: pointer;
 }
 
 aside ul {
@@ -1109,7 +1134,7 @@ aside ul li a i {
 }
 
 aside .manager-profile {
-  padding: 25px 18px;
+  padding: 25px 18px 50px;
 }
 
 aside .manager-profile h2 {
@@ -1155,30 +1180,25 @@ aside .manager-profile a::before {
 
 header {
   width: 100%;
-  height: 61px;
   background-color: #fff;
   border-bottom: 1px solid #E3E3E3;
-  float: right;
-  position: fixed;
-  right: 0;
-  z-index: 9998;
 }
 
 header ul {
-  text-align: right;
+  text-align: center;
   font-size: 0;
 }
 
 header ul li {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   height: 100%;
   line-height: 60px;
-  border-left: 1px solid #E3E3E3;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 13.5px;
   cursor: pointer;
+  border-bottom: 1px solid #E3E3E3;
 }
 
 header ul li:hover {
@@ -1198,7 +1218,6 @@ header ul li.wallet {
 }
 
 header ul li.wallet .wallet-dropdown {
-  position: absolute;
   width: calc(100% + 2px);
   height: 120px;
   left: -1px;
@@ -1232,11 +1251,62 @@ header ul li .link-small {
   vertical-align: top;
 }
 
+@media (max-width: 768px) {
+  .side-menu {
+    display: none;
+  }
+  .side-menu.show {
+    display: block;
+  }
+  .sidebar-container {
+    width: 100%;
+  }
+  header {
+    margin-top: 58px;
+  }
+}
+
+@media (min-width: 768px) {
+  section:first-of-type {
+    margin-top: 78px;
+  }
+  .page-wrapper aside.sidebar .sidebar-container {
+    position: fixed;
+    height: 100vh;
+  }
+  .page-wrapper aside.sidebar .sidebar-container .dropdown-button {
+    display: none;
+  }
+  .page-wrapper header {
+    height: 61px;
+    float: right;
+    right: 0;
+    z-index: 9998;
+    position: fixed;
+  }
+  .page-wrapper header ul {
+    text-align: right;
+  }
+  .page-wrapper header ul li {
+    display: inline-block;
+    border-left: 1px solid #E3E3E3;
+    border-bottom: none;
+  }
+  .page-wrapper header ul li.wallet .wallet-dropdown {
+    position: absolute;
+  }
+}
+
 @media (min-width: 992px) {
   .page-wrapper aside.sidebar {
     -ms-flex: 0 0 14.7%;
         flex: 0 0 14.7%;
     max-width: 14.7%;
+  }
+  .page-wrapper aside.sidebar .sidebar-container {
+    -ms-flex: 0 0 14.7%;
+        flex: 0 0 14.7%;
+    width: 14.7%;
   }
   .page-wrapper div.main-site {
     -ms-flex: 0 0 85.3%;

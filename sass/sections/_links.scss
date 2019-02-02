@@ -15,18 +15,14 @@
 			}
 
 			td:last-child {
-				transform: translateX(25px);
-				position: relative;
 
 				.link-icons {
-					position: absolute;
-					right: 40px;
-					top: 0;
-
+					display: block;
+					
 					a {
-						display: none;
+						display: inline-block;
 						padding-right: 2px;
-						line-height: 58px;
+						padding-top: 10px;
 						color: $main-text-color;
 
 						&:hover {
@@ -43,6 +39,32 @@
 			&:hover {
 				td:last-child .link-icons a {
 					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.table-container {
+		overflow: hidden;
+
+		table tr {
+			td:last-child {
+				transform: translateX(25px);
+				position: relative;
+
+				.link-icons {
+					position: absolute;
+					right: 40px;
+					top: 0;
+
+					a {
+						display: none;
+						line-height: 58px;
+						padding-top: 0;
+					}
 				}
 			}
 		}
