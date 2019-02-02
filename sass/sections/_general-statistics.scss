@@ -1,0 +1,76 @@
+.statistics {
+
+	.table-figures {
+
+		.figures-left {
+			padding-right: 34px;
+		}
+
+		.figures-right {
+			padding-left: 34px;
+		}
+
+		table {
+
+			tr {
+				&:hover {
+					background-color: inherit;
+				}
+
+				td {
+					padding: 20px 0 7px;
+
+					&:last-child {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+
+	.earnings-chart {
+		.tabs {
+			margin-top: 20px;
+			margin-bottom: 55px;
+
+			.btn {
+				padding: 0 18px 0 48px;
+				position: relative;
+				margin: 20px;
+
+				.blue,
+				.orange,
+				.green {
+					position: absolute;
+					top: 12px;
+					left: 18px;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					margin-right: 12px;
+					line-height: inherit;
+				}
+
+				.blue {
+					background-color: $chart-secondary-color;
+				}
+
+				.orange {
+					background-color: $brand-color;
+				}
+
+				.green {
+					background-color: $checkbox-color;
+				}
+			}
+
+			@extend .text-center;
+		}
+
+		.chart-container {
+			text-align: center;
+			vertical-align: middle;
+			padding: 2px 0 53px;
+		}
+	}
+}
