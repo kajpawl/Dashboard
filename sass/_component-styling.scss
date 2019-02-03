@@ -26,6 +26,11 @@ section {
 	padding: 0 15px;
 }
 
+.section-content-form {
+	max-width: 500px;
+	padding: 0 15px;
+}
+
 h1, 
 h2, 
 h3, 
@@ -53,6 +58,13 @@ h1 {
 	h2 {
 		font-size: 15px;
 	}
+}
+
+.section-break {
+	background-color: $disabled-text-color;
+	width: 100%;
+	height: 1px;
+	margin: 34px 0;
 }
 
 h3 {
@@ -221,8 +233,38 @@ table {
 		background-color: $background-main-color;
 	}
 
+	th {
+		color: $main-text-color;
+		font-weight: 700;
+	}
+
 	&.list {
 		padding: 0;
+	}
+
+	&.table-details {
+
+		td:first-child {
+			font-weight: normal;
+			color: $data-text-color;
+		}
+
+		th,
+		td {
+			font-size: 12.5px;
+			padding: 22px 15px;
+		}
+
+		thead tr:hover {
+			background-color: $background-section-color;
+		}
+
+		th:hover {
+			color: $data-text-color;
+			background-color: $background-main-color;
+			border-radius: 3px;
+			cursor: pointer;
+		}
 	}
 }
 
@@ -230,6 +272,11 @@ table {
 	overflow-x: auto;
 }
 
+.table-details-container {
+	overflow-x: auto;
+	width: 100%;
+	padding: 5px 15px;
+}
 
 
 .layer {
@@ -284,6 +331,32 @@ textarea {
 	resize: none;
 }
 
+label {
+	display: inline-block;
+	text-align: left;
+}
+
+.form-field {
+	text-align: left;
+	@extend .section-content-form;
+
+	label {
+		height: 56px;
+		line-height: 56px;
+		font-weight: 700;
+		font-size: 15px;
+		color: $main-text-color;
+	}
+
+	input {
+		float: right;
+	}
+}
+
+.form-wrapper {
+	padding: 35px 0;
+}
+
 
 
 /*			STYLING			*/
@@ -302,9 +375,36 @@ textarea {
 
 
 
+.pagination {
+	display: block;
+	padding: 10px 0 35px;
 
+	a {
+	  font-size: $header-font-size;
+	  padding: 10px 12px;
+	  text-decoration: none;
 
+		&.active,
+		&:hover {
+			background-color: $background-main-color;
+			color: $link-color;
+		}
 
+		&.active {
+			color: $main-text-color;
+			font-weight: 700;
+		}
+
+		&.disabled {
+			color: $main-text-color;
+
+			&:hover {
+				background-color: transparent;
+				cursor: default;
+			}
+		}
+	}
+}
 
 
 .date-period {

@@ -644,6 +644,11 @@ section:hover {
   padding: 0 15px;
 }
 
+.section-content-form, .form-field {
+  max-width: 500px;
+  padding: 0 15px;
+}
+
 h1,
 h2,
 h3,
@@ -671,6 +676,13 @@ h1 {
 
 .section-header h2 {
   font-size: 15px;
+}
+
+.section-break {
+  background-color: #E3E3E3;
+  width: 100%;
+  height: 1px;
+  margin: 34px 0;
 }
 
 h3 {
@@ -828,12 +840,45 @@ table tr:hover {
   background-color: #F3F3F1;
 }
 
+table th {
+  color: #979797;
+  font-weight: 700;
+}
+
 table.list {
   padding: 0;
 }
 
+table.table-details td:first-child {
+  font-weight: normal;
+  color: #333;
+}
+
+table.table-details th,
+table.table-details td {
+  font-size: 12.5px;
+  padding: 22px 15px;
+}
+
+table.table-details thead tr:hover {
+  background-color: #fff;
+}
+
+table.table-details th:hover {
+  color: #333;
+  background-color: #F3F3F1;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .table-container {
   overflow-x: auto;
+}
+
+.table-details-container {
+  overflow-x: auto;
+  width: 100%;
+  padding: 5px 15px;
 }
 
 .layer {
@@ -898,6 +943,31 @@ textarea {
   resize: none;
 }
 
+label {
+  display: inline-block;
+  text-align: left;
+}
+
+.form-field {
+  text-align: left;
+}
+
+.form-field label {
+  height: 56px;
+  line-height: 56px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #979797;
+}
+
+.form-field input {
+  float: right;
+}
+
+.form-wrapper {
+  padding: 35px 0;
+}
+
 /*			STYLING			*/
 .text-center, .statistics .earnings-chart .tabs {
   text-align: center;
@@ -909,6 +979,36 @@ textarea {
 
 .text-right {
   text-align: right;
+}
+
+.pagination {
+  display: block;
+  padding: 10px 0 35px;
+}
+
+.pagination a {
+  font-size: 15.5px;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.pagination a.active, .pagination a:hover {
+  background-color: #F3F3F1;
+  color: #56819F;
+}
+
+.pagination a.active {
+  color: #979797;
+  font-weight: 700;
+}
+
+.pagination a.disabled {
+  color: #979797;
+}
+
+.pagination a.disabled:hover {
+  background-color: transparent;
+  cursor: default;
 }
 
 .date-period {
@@ -1065,6 +1165,15 @@ textarea {
   }
 }
 
+.personal-data input[type="text"],
+.personal-data input[type="email"],
+.personal-data input[type="password"],
+.personal-data textarea {
+  display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 /* Pages / Views */
 aside .sidebar-container {
   position: fixed;
@@ -1072,10 +1181,6 @@ aside .sidebar-container {
   z-index: 9999;
   left: 0;
   top: 0;
-}
-
-aside .active {
-  background-color: #282828;
 }
 
 aside .company-logo {
@@ -1114,12 +1219,12 @@ aside ul li a {
   padding: 13px 0 13px 10px;
 }
 
-aside ul li a:hover {
+aside ul li a:hover, aside ul li a.active {
   background-color: #282828;
   color: #fff;
 }
 
-aside ul li a:hover::after {
+aside ul li a:hover::after, aside ul li a.active::after {
   position: absolute;
   content: "";
   top: 0;

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dashboard - Personal Data</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+		<link rel="stylesheet" href="./vendor/icon-font/css/Glyphter.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body class="general-dashboard">
+		<div class="container-fluid page-wrapper">
+			<div class="row">
+				<aside class="col-sm-12 col-md-2 sidebar">
+					<div class="sidebar-container">
+						<img src="http://placehold.it/150x40" alt="Company logo" class="company-logo">
+						<i class="dropdown-button">&#9776;</i>
+						<div class="side-menu">
+							<ul>
+								<li><a href="#"><i class="icon-general"></i>General</a></li>
+								<li><a href="#"><i class="icon-details"></i>Details</a></li>
+								<li><a href="#"><i class="icon-links"></i>Links</a></li>
+								<li><a href="#"><i class="icon-banners"></i>Banners</a></li>
+								<li><a href="#" class="active"><i class="icon-personaldata"></i>Personal data</a></li>
+								<li><a href="#"><i class="icon-payout"></i>Payout</a></li>
+								<li><a href="#"><i class="icon-postback"></i>Postback</a></li>
+							</ul>
+							<div class="manager-profile">
+								<h2>Your manager</h2>
+								<div>
+									<img src="http://placehold.it/50x50" alt="Manager's photo">
+									<a href="#" id="your-manager">Mikhael E.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<div class="col-sm-12 col-md-10 main-site">
+					<header class="top-menu">
+						<div class="row">
+							<div class="col-sm-12">
+								<ul>
+									<li class="wallet"><i class="icon-wallet"></i>$1,500.00<i class="icon-arrow-down"></i>	
+										<div class="wallet-dropdown"></div>
+									</li>
+									<li><i class="icon-notification new-notification"></i></li>
+									<li><i class="icon-profile"></i><a href="#" class="link-small">Leonardo Dicaprio</a></li>
+									<li><i class="icon-quit"></i></li>
+								</ul>
+							</div>
+						</div>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<section class="personal-data">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-sm-12 section-header">
+												<h2>Personal data</h2>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<div class>
+													<div class="col-sm-12 text-center form-wrapper">
+														<form action="" method="POST">
+															<div class="form-field">
+																<label>Name</label>
+																<input type="text" name="name" placeholder="Name">
+															</div>
+															<div class="form-field">
+																<label>Surname</label>
+																<input type="text" name="surname" placeholder="Surname">
+															</div>
+															<div class="form-field">
+																<label>E-mail</label>
+																<input type="email" name="e-mail" placeholder="E-mail">
+															</div>
+															<div class="form-field">
+																<label>Phone number</label>
+																<input type="text" name="number" placeholder="Phone number">
+															</div>
+															<div class="section-break"></div>
+															<div class="form-field">
+																<label>Skype</label>
+																<input type="text" name="skype" placeholder="Skype">
+															</div>
+															<div class="form-field">
+																<label>ICQ</label>
+																<input type="text" name="icq" placeholder="ICQ">
+															</div>
+															<div class="form-field">
+																<label>Msn</label>
+																<input type="text" name="msn" placeholder="Msn">
+															</div>
+															<div class="section-break"></div>
+															<div class="form-field">
+																<label>Wallet</label>
+																<input type="text" name="wallet" placeholder="Wallet">
+															</div>
+															<div class="section-break"></div>
+															<div class="form-field">
+																<label>Password</label>
+																<input type="password" name="password" placeholder="Password">
+															</div>
+															<div class="form-field">
+																<label>Repeat</label>
+																<input type="password" name="repeat-password" placeholder="Repeat">
+															</div>
+															<div class="section-break"></div>
+															<input type="submit" name="save" value="Send" class="btn btn-primary">
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

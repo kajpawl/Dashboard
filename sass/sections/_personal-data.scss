@@ -1,0 +1,11 @@
+.personal-data {
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		display: inline-block;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+}
