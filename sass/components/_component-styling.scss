@@ -272,23 +272,13 @@ table {
 	overflow-x: auto;
 }
 
-.table-details-container {
-	overflow-x: auto;
-	width: 100%;
+.table-details-padding {
 	padding: 5px 15px;
-}
 
-
-.layer {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	opacity: .6;
-	transition: .2s;
+	.table-details-container {
+		overflow-x: auto;
+		width: 100%;
+	}
 }
 
 
@@ -520,7 +510,7 @@ label {
 	input.btn {
 		width: 40px;
 		padding: 0 10px;
-		margin-left: 10px;
+		margin: 0 10px;
 		border: none;
 		font-size: 20px;
 	}

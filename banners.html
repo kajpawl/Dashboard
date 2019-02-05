@@ -42,8 +42,8 @@
 								<ul>
 									<li><a href="#" class="wallet"><i class="icon-wallet"></i>$1,500.00<i class="icon-arrow-down-small"></i></a></li>
 									<li><a href="#"><i class="icon-notification new-notification"></i></a></li>
-									<li><a href="#" class="link-small"><i class="icon-profile"></i>Leonardo Dicaprio</a></li>
-									<li><a href="#"><i class="icon-quit"></i></a></li>
+									<li><a href="#" class="link-small" id="login-button"><i class="icon-profile"></i>Leonardo Dicaprio</a></li>
+									<li><a href="#" id="quit-button"><i class="icon-quit"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -62,7 +62,7 @@
 											<div class="col-sm-12">
 												<div class="section-content">
 													<div class="col-sm-12 text-center">
-														<div class="btn btn-primary">+ add new</div>
+														<div class="btn btn-primary add-banner-button" id="add-banner-button">+ add new</div>
 													</div>
 													<div class="table-container">
 														<table>
@@ -72,30 +72,30 @@
 																	<td><a href="#">http://www.website.com/bannermain.gif</a><div class="link-icons"><a href="#"><i class="icon-links"></i></a><a href="#"><i class="icon-trash"></i></a></div></td>
 																</tr>
 																<tr>
-																	<td>Sign up banner</a></td>
+																	<td>Sign up banner</td>
 																	<td><a href="#">http://www.website.com/signup.gif</a><div class="link-icons"><a href="#"><i class="icon-links"></i></a><a href="#"><i class="icon-trash"></i></a></div></td>
 																</tr>
 																<tr>
-																	<td>Banner left side</a></td>
+																	<td>Banner left side</td>
 																	<td><a href="#">http://www.website.com/leftside.gif</a><div class="link-icons"><a href="#"><i class="icon-links"></i></a><a href="#"><i class="icon-trash"></i></a></div></td>
 																</tr>
 																<tr>
-																	<td>Vertical banner</a></td>
+																	<td>Vertical banner</td>
 																	<td><a href="#">http://www.website.com/vert.gif</a><div class="link-icons"><a href="#"><i class="icon-links"></i></a><a href="#"><i class="icon-trash"></i></a></div></td>
 																</tr>
 																<tr>
-																	<td>Front banner</a></td>
+																	<td>Front banner</td>
 																	<td><a href="#">http://www.website.com/front.gif</a><div class="link-icons"><a href="#"><i class="icon-links"></i></a><a href="#"><i class="icon-trash"></i></a></div></td>
 																</tr>
 																<tr>
-																	<td>Horizontal banner</a></td>
+																	<td>Horizontal banner</td>
 																	<td><a href="#">http://www.website.com/horizontal.gif</a><div class="link-icons"><a href="#"><i class="icon-links"></i></a><a href="#"><i class="icon-trash"></i></a></div></td>
 																</tr>
 															</tbody>
 														</table>
 													</div>
 													<div class="col-sm-12 text-center">
-														<div class="btn btn-primary">+ add new</div>
+														<div class="btn btn-primary add-banner-button" id="add-banner-button-2">+ add new</div>
 													</div>
 												</div>
 											</div>
@@ -108,6 +108,194 @@
 				</div>
 			</div>
 		</div>
+		<div class="overlay" id="overlay">
+			<div class="modal login" id="modal-login">
+				<div class="btn-close js--close-modal"><i class="icon-close"></i></div>
+				<div class="section-header">
+					<h2>Login</h2>
+				</div>
+				<div class="row modal-login-row">
+					<form>
+						<input type="text" name="login" placeholder="login name">
+						<input type="password" name="password" placeholder="password">
+						<input type="submit" name="save" value="Enter" class="btn btn-primary">
+					</form>
+				</div>
+			</div>
+			<div class="modal quit" id="modal-quit">
+				<div class="btn-close js--close-modal"><i class="icon-close"></i></div>
+				<div class="section-header">
+					<h2>Do you really want to Quit?</h2>
+				</div>
+				<div class="row modal-quit-row">
+					<div class="btn btn-default js--close-modal">Cancel</div>
+					<div class="btn btn-primary js--close-modal">Quit</div>
+				</div>
+			</div>
+			<div class="modal modal-large add-banners" id="modal-add-banners">
+				<div class="btn-close js--close-modal"><i class="icon-close"></i></div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 section-header">
+							<h2>Add banners</h2>
+						</div>
+					</div>
+					<form action="" method="POST">
+						<div class="row postback-row-padding">
+							<div class="col-sm-12 col-md-5 form-column">
+								<label>Scheme name</label>
+								<input type="text" name="scheme-name" placeholder="Name">
+							</div>
+							<div class="col-sm-12 col-md-5 form-column">
+								<label>Campaign</label>
+								<select name="campaign-type">
+									<option value="select-campaign">Select</option>
+									<option value="position1">Position 1</option>
+									<option value="position2">Position 2</option>
+									<option value="position3">Position 3</option>
+								</select>
+							</div>
+							<div class="col-sm-12 col-md-2 form-column">
+								<label>Language</label>
+								<select name="language">
+									<option value="select-language">EN</option>
+									<option value="position1">Position 1</option>
+									<option value="position2">Position 2</option>
+									<option value="position3">Position 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="row postback-row-padding">
+							<div class="col-sm-12 col-md-4 form-column">
+								<label>Select banners</label>
+								<select name="banners">
+									<option value="select-banners">Select</option>
+									<option value="position1">Position 1</option>
+									<option value="position2">Position 2</option>
+									<option value="position3">Position 3</option>
+								</select>
+							</div>
+							<div class="col-sm-12 col-md-4 form-column">
+								<label>Design</label>
+								<select name="design">
+									<option value="select-design">Select</option>
+									<option value="position1">Position 1</option>
+									<option value="position2">Position 2</option>
+									<option value="position3">Position 3</option>
+								</select>
+							</div>
+							<div class="col-sm-12 col-md-4 form-column">
+								<label>File type</label>
+								<select name="filetype">
+									<option value="select-filetype">All</option>
+									<option value="position1">Position 1</option>
+									<option value="position2">Position 2</option>
+									<option value="position3">Position 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 form-column form-column-borders">
+								<label>Select banners</label>
+								<div class="checkboxes">
+									<label>
+										<input type="checkbox" name="name-1" value="bannerMain"><div class="icon">&#10003;</div> Banner main
+									</label>
+									<label>
+										<input type="checkbox" name="name-2" value="signUpBanner"><div class="icon">&#10003;</div> Sign up banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-3" value="leftBanner"><div class="icon">&#10003;</div> Left banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-4" value="rightBanner"><div class="icon">&#10003;</div> Right banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-1" value="bottomBanner"><div class="icon">&#10003;</div> Bottom banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-2" value="longBanner"><div class="icon">&#10003;</div> Long banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-3" value="personalCabinetBanner"><div class="icon">&#10003;</div> Personal cabinet banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-4" value="Popup banner"><div class="icon">&#10003;</div> callAgain
+									</label>
+									<label>
+										<input type="checkbox" name="name-1" value="bottomBanner"><div class="icon">&#10003;</div> Bottom banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-2" value="longBanner"><div class="icon">&#10003;</div> Long banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-3" value="personalCabinetBanner"><div class="icon">&#10003;</div> Personal cabinet banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-4" value="Popup banner"><div class="icon">&#10003;</div> callAgain
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 form-column form-column-borders">
+								<label>Select websites</label>
+								<div class="checkboxes select-websites">
+									<label>
+										<input type="checkbox" name="name-1" value="bannerMain"><div class="icon">&#10003;</div> Landing page Money
+									</label>
+									<label>
+										<input type="checkbox" name="name-2" value="signUpBanner"><div class="icon">&#10003;</div> LP your choice
+									</label>
+									<label>
+										<input type="checkbox" name="name-3" value="leftBanner"><div class="icon">&#10003;</div> LP Wallet
+									</label>
+									<label>
+										<input type="checkbox" name="name-4" value="rightBanner"><div class="icon">&#10003;</div> E-Shop 01
+									</label>
+									<label>
+										<input type="checkbox" name="name-1" value="bottomBanner"><div class="icon">&#10003;</div> Toy store
+									</label>
+									<label>
+										<input type="checkbox" name="name-2" value="longBanner"><div class="icon">&#10003;</div> Book store
+									</label>
+									<label>
+										<input type="checkbox" name="name-3" value="personalCabinetBanner"><div class="icon">&#10003;</div> Charity
+									</label>
+									<label>
+										<input type="checkbox" name="name-4" value="Popup banner"><div class="icon">&#10003;</div> LP Icons Store
+									</label>
+									<label>
+										<input type="checkbox" name="name-1" value="bottomBanner"><div class="icon">&#10003;</div> Bottom banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-2" value="longBanner"><div class="icon">&#10003;</div> Long banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-3" value="personalCabinetBanner"><div class="icon">&#10003;</div> Personal cabinet banner
+									</label>
+									<label>
+										<input type="checkbox" name="name-4" value="Popup banner"><div class="icon">&#10003;</div> callAgain
+									</label>
+								</div>
+							</div>
+							<div class="row postback-row-padding">
+								<div class="col-sm-12 form-column bottom-column">
+									<div class="row">
+										<div class="col-sm-12 col-md-8">
+											<input type="text" class="generated-link" name="generated-link" placeholder="Generated link">
+										</div>
+										<div class="col-sm-12 col-md-4 text-center">
+											<div class="btn btn-disabled"><i class="icon-links"></i>Copy link</div>
+											<div class="btn btn-primary js--close-modal">Save</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 		<script src="js/script.js"></script>
+		<script src="js/script-banners.js"></script>
 	</body>
 </html>

@@ -875,22 +875,13 @@ table.table-details th:hover {
   overflow-x: auto;
 }
 
-.table-details-container {
-  overflow-x: auto;
-  width: 100%;
+.table-details-padding {
   padding: 5px 15px;
 }
 
-.layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.table-details-padding .table-details-container {
+  overflow-x: auto;
   width: 100%;
-  height: 100%;
-  opacity: .6;
-  transition: .2s;
 }
 
 input[type="text"],
@@ -1130,9 +1121,165 @@ label {
 .date-period input.btn {
   width: 40px;
   padding: 0 10px;
-  margin-left: 10px;
+  margin: 0 10px;
   border: none;
   font-size: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 11111;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input[type="submit"] {
+  font-size: 18px;
+}
+
+.modal {
+  max-width: 724px;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.modal .btn-close i {
+  font-size: 12px;
+  color: #979797;
+}
+
+.modal.login .modal-login-row {
+  padding: 36px 38px 46px;
+}
+
+.modal.login .modal-login-row form {
+  text-align: center;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.modal.login .modal-login-row form input {
+  display: block;
+  margin: 9px;
+}
+
+.modal.login .modal-login-row form input[type="text"],
+.modal.login .modal-login-row form input[type="password"] {
+  width: 214px;
+}
+
+.modal.login .modal-login-row form input[type="text"]:-ms-input-placeholder,
+.modal.login .modal-login-row form input[type="password"]:-ms-input-placeholder {
+  padding-left: 35px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.modal.login .modal-login-row form input[type="text"]::placeholder,
+.modal.login .modal-login-row form input[type="password"]::placeholder {
+  padding-left: 35px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.modal.login .modal-login-row form input[type="text"]:-ms-input-placeholder {
+  background-image: url("../images/icons/login.svg");
+  background-size: 16px auto;
+}
+
+.modal.login .modal-login-row form input[type="text"]::placeholder {
+  background-image: url("../images/icons/login.svg");
+  background-size: 16px auto;
+}
+
+.modal.login .modal-login-row form input[type="password"]:-ms-input-placeholder {
+  background-image: url("../images/icons/password.svg");
+  background-size: 22px auto;
+}
+
+.modal.login .modal-login-row form input[type="password"]::placeholder {
+  background-image: url("../images/icons/password.svg");
+  background-size: 22px auto;
+}
+
+.modal.login .modal-login-row form input[type="submit"] {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.modal.quit {
+  width: 360px;
+}
+
+.modal.quit .section-header {
+  padding: 25px 20px;
+}
+
+.modal.quit .section-header h2 {
+  text-transform: none;
+  font-size: 15px;
+}
+
+.modal.quit .modal-quit-row {
+  padding: 23px 10px;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.modal.quit .btn {
+  width: 95px;
+  text-align: center;
+  margin: 0 10px;
+  display: block;
+}
+
+.modal.modal-large {
+  max-width: 1075px;
+}
+
+@media (min-width: 1200px) {
+  .modal-large {
+    width: 1075px;
+  }
 }
 
 /* Sections */
@@ -1340,6 +1487,80 @@ label {
 
 .postback-delay-chart .timeline .indicator p {
   padding: 15px 0;
+}
+
+.add-banners p,
+.add-url p {
+  padding: 28px 10px 0;
+}
+
+.add-banners .postback-row-padding,
+.add-url .postback-row-padding {
+  padding: 5px 7px;
+}
+
+.add-banners .generated-link,
+.add-url .generated-link {
+  max-width: 755px;
+  display: inline-block;
+}
+
+.add-banners .btn,
+.add-url .btn {
+  margin: 0 8px;
+  font-size: 18px;
+  padding: 0 30px;
+}
+
+.add-banners .btn i,
+.add-url .btn i {
+  color: #fff;
+  font-size: 16px;
+  padding: 0 14px;
+}
+
+.add-banners .btn.btn-disabled,
+.add-url .btn.btn-disabled {
+  padding-left: 8px;
+  padding-right: 26px;
+}
+
+.add-banners .form-column-borders,
+.add-url .form-column-borders {
+  max-height: 405px;
+}
+
+.add-banners .form-column-borders .checkboxes,
+.add-url .form-column-borders .checkboxes {
+  height: calc(100% - 3px);
+}
+
+.add-banners .form-column-borders .checkboxes.three-columns,
+.add-url .form-column-borders .checkboxes.three-columns {
+  column-count: 3;
+  overflow-x: hidden;
+}
+
+.add-banners .form-column-borders .checkboxes.three-columns label:first-child,
+.add-url .form-column-borders .checkboxes.three-columns label:first-child {
+  margin-top: 0;
+}
+
+.add-banners .form-column-borders .three-columns-label,
+.add-url .form-column-borders .three-columns-label {
+  margin-bottom: 23px;
+}
+
+.add-banners .bottom-column,
+.add-url .bottom-column {
+  padding: 15px 10px 17px;
+}
+
+@media (max-width: 767px) {
+  .add-url .form-column-borders .checkboxes.three-columns {
+    column-count: 1;
+    overflow: auto;
+  }
 }
 
 /* Pages / Views */

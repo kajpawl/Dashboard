@@ -1,0 +1,133 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 11111;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+	padding: 30px;
+	display: none;
+
+	&.show {
+		display: flex;
+	}
+}
+
+input[type="submit"] {
+	font-size: 18px;
+}
+
+.modal {
+	max-width: 724px;
+	margin: auto;
+	background-color: $background-section-color;
+	position: relative;
+	display: none;
+
+	&.show {
+		display: block;
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: center;
+		line-height: 30px;
+		cursor: pointer;
+
+		i {
+			font-size: 12px;
+			color: $main-text-color;
+		}
+	}
+
+	&.login {
+
+		.modal-login-row {
+			padding: 36px 38px 46px;
+
+			form {
+				text-align: center;
+				width: 100%;
+				display: flex;
+    			flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+				align-content: stretch;
+
+				input {
+					display: block;
+					margin: 9px;
+				}
+
+				input[type="text"],
+				input[type="password"] {
+					width: 214px;
+
+					&::placeholder {
+						padding-left: 35px;
+						background-position: left center;
+						background-repeat: no-repeat;
+					}
+				}
+
+				input[type="text"]::placeholder {
+					background-image: url("../images/icons/login.svg");	
+					background-size: 16px auto;				
+				}
+
+				input[type="password"]::placeholder {
+					background-image: url("../images/icons/password.svg");
+					background-size: 22px auto;
+				}
+
+				input[type="submit"] {
+					padding-left: 60px;
+					padding-right: 60px;
+				}
+			}
+		}
+	}
+
+	&.quit {
+
+		width: 360px;
+
+		.section-header {
+			padding: 25px 20px;
+			
+			h2 {
+				text-transform: none;
+				font-size: 15px;
+			}
+		}
+
+		.modal-quit-row {
+			padding: 23px 10px;
+			justify-content: flex-end;
+		}
+
+		.btn {
+			width: 95px;
+			text-align: center;
+			margin: 0 10px;
+			display: block;
+		}
+	}
+
+	&.modal-large {
+		max-width: 1075px;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+	.modal-large {
+		width: 1075px;
+	}
+}
