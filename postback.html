@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dashboard - Postback</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+		<link rel="stylesheet" href="./vendor/icon-font/css/Glyphter.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body class="body-postback">
+		<div class="container-fluid page-wrapper">
+			<div class="row">
+				<aside class="col-sm-12 col-md-2 sidebar">
+					<div class="sidebar-container">
+						<img src="http://placehold.it/150x40" alt="Company logo" class="company-logo">
+						<i class="dropdown-button">&#9776;</i>
+						<div class="side-menu">
+							<ul>
+								<li><a href="index.html"><i class="icon-general"></i>General</a></li>
+								<li><a href="details.html"><i class="icon-details"></i>Details</a></li>
+								<li><a href="links.html"><i class="icon-links"></i>Links</a></li>
+								<li><a href="banners.html"><i class="icon-banners"></i>Banners</a></li>
+								<li><a href="personal-data.html"><i class="icon-personaldata"></i>Personal data</a></li>
+								<li><a href="payout.html"><i class="icon-payout"></i>Payout</a></li>
+								<li><a href="#" class="active"><i class="icon-postback"></i>Postback</a></li>
+							</ul>
+							<div class="manager-profile">
+								<h2>Your manager</h2>
+								<div>
+									<img src="http://placehold.it/50x50" alt="Manager's photo">
+									<a href="#" id="your-manager">Mikhael E.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<div class="col-sm-12 col-md-10 main-site">
+					<header class="top-menu">
+						<div class="row">
+							<div class="col-sm-12">
+								<ul>
+									<li><a href="#" class="wallet"><i class="icon-wallet"></i>$1,500.00<i class="icon-arrow-down-small"></i></a></li>
+									<li><a href="#"><i class="icon-notification new-notification"></i></a></li>
+									<li><a href="#" class="link-small"><i class="icon-profile"></i>Leonardo Dicaprio</a></li>
+									<li><a href="#"><i class="icon-quit"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<section class="postback">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-sm-12 section-header">
+												<h2>New postback</h2>
+											</div>
+										</div>
+										<div class="row postback-row-padding">
+											<div class="col-sm-12">
+												<p>You can insert some parameters in this postback:</p>
+											</div>
+										</div>
+										<form action="" method="POST">
+											<div class="row postback-row-padding">
+												<div class="col-sm-12 col-md-6 form-column">
+													<label>Signup</label>
+													<textarea placeholder="crm_userId = %user_id%
+subid = %p%"></textarea>
+												</div>
+												<div class="col-sm-12 col-md-6 form-column">
+													<label>Deposit</label>
+													<textarea placeholder="crm_userId = %user_id%
+subid = %p%"></textarea>
+												</div>
+											</div>
+											<div class="row postback-row-padding">
+												<div class="col-sm-12 col-md-4 form-column">
+													<label>Postback type</label>
+													<select name="postback-type">
+														<option value="type1">S2S (http://..)</option>
+														<option value="type2">Type 2</option>
+														<option value="type3">Type 3</option>
+													</select>
+												</div>
+												<div class="col-sm-12 col-md-4 form-column">
+													<label>To countries</label>
+													<select name="postback-type">
+														<option value="select-country">Select country</option>
+														<option value="position1">Position 1</option>
+														<option value="position2">Position 2</option>
+														<option value="position3">Position 3</option>
+													</select>
+												</div>
+												<div class="col-sm-12 col-md-4 form-column">
+													<label>Sending options</label>
+													<select name="postback-type">
+														<option value="select-options">Select</option>
+														<option value="position1">Position 1</option>
+														<option value="position2">Position 2</option>
+														<option value="position3">Position 3</option>
+													</select>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-12 col-md-6 form-column form-column-borders">
+													<label><span class="not-label">NOT</span> send statuses</label>
+													<div class="checkboxes">
+														<label>
+															<input type="checkbox" name="name-1" value="checkNumber"><div class="icon">&#10003;</div> checkNumber
+														</label>
+														<label>
+															<input type="checkbox" name="name-2" value="noAnswer"><div class="icon">&#10003;</div> noAnswer
+														</label>
+														<label>
+															<input type="checkbox" name="name-3" value="noCall"><div class="icon">&#10003;</div> noCall
+														</label>
+														<label>
+															<input type="checkbox" name="name-4" value="callAgain"><div class="icon">&#10003;</div> callAgain
+														</label>
+														<label>
+															<input type="checkbox" name="name-1" value="checkNumber"><div class="icon">&#10003;</div> checkNumber
+														</label>
+														<label>
+															<input type="checkbox" name="name-2" value="noAnswer"><div class="icon">&#10003;</div> noAnswer
+														</label>
+														<label>
+															<input type="checkbox" name="name-3" value="noCall"><div class="icon">&#10003;</div> noCall
+														</label>
+														<label>
+															<input type="checkbox" name="name-4" value="callAgain"><div class="icon">&#10003;</div> callAgain
+														</label>
+													</div>
+												</div>
+
+												<div class="col-sm-12 col-md-6 form-column form-column-borders">
+													<label>Send after</label>
+													<div class="postback-delay-chart text-left">
+														<div class="chart-wrapper">
+															<span class="value min">0</span>
+															<span class="value max">168</span>
+															<div class="timeline">
+																<div class="timeline-active"></div>
+																<div class="indicator text-center">
+																	<div class="arrow"></div>
+																	<p><span id="period">104</span> hours</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-12 text-right">
+													<input type="submit" name="save" value="Create Pixel" class="btn btn-primary">
+												</div>
+											</div>
+										</form>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

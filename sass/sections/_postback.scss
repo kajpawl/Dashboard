@@ -1,0 +1,83 @@
+.postback {
+
+	p {
+		padding: 28px 10px 0;
+	}
+
+	.postback-row-padding {
+		padding: 5px 7px;
+	}
+
+	label {
+
+		.not-label {
+			color: red;
+		}
+	}
+
+	.btn {
+		margin: 20px 24px;
+		font-size: 18px;
+	}
+}
+
+
+
+/*			postback delay chart			*/
+
+
+.postback-delay-chart {
+    padding: 23px 2px 70px;
+
+	span.value {
+		color: $main-text-color;
+
+		&.max {
+			float: right;
+		}
+	}
+
+	.timeline {
+		width: 100%;
+		height: 6px;
+		background-color: $disabled-text-color;
+		position: relative;
+		margin: 6px 0;
+	
+		.timeline-active {
+			position: absolute;
+			width: 62%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: $brand-color;
+		}
+
+		.indicator {
+			position: absolute;
+			width: 74px;
+			top: 12px;
+			left: calc(62% - 37px);
+			margin: 0;
+
+			.arrow {
+				width: 0;
+				height: 0;
+				border-top: 0;
+				border-bottom: 23px solid $brand-color;
+				border-left: 14px solid transparent;
+				border-right: 14px solid transparent;
+				cursor: pointer;
+
+				&:hover {
+					border-bottom-color: $brand-color-hover;
+				}
+			}
+
+			p {
+				padding: 15px 0;
+			}
+		}
+	}
+
+}

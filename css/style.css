@@ -896,6 +896,7 @@ table.table-details th:hover {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+select,
 textarea {
   font-family: "Open Sans", Helvetica, Arial;
   font-weight: normal;
@@ -916,6 +917,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
+select:focus,
 textarea:focus {
   border: 1px solid #979797;
 }
@@ -923,6 +925,7 @@ textarea:focus {
 input[type="text"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
+select:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #BABABA;
 }
@@ -930,6 +933,7 @@ textarea:-ms-input-placeholder {
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="password"]::placeholder,
+select::placeholder,
 textarea::placeholder {
   color: #BABABA;
 }
@@ -941,6 +945,20 @@ input[type="submit"] {
 
 textarea {
   resize: none;
+  padding: 15px 18px;
+  font-size: 12.5px;
+  line-height: 1.5em;
+  height: 188px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../images/icons/arrow-down.svg");
+  background-position: 95% center;
+  background-size: 13px auto;
+  background-repeat: no-repeat;
 }
 
 label {
@@ -964,6 +982,82 @@ label {
   float: right;
 }
 
+.form-column {
+  padding: 10px;
+}
+
+.form-column label {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  color: #979797;
+  padding-bottom: 20px;
+}
+
+.form-column input,
+.form-column textarea,
+.form-column select {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.form-column-borders {
+  border: 1px solid #F3F3F1;
+  margin-top: 20px;
+  padding: 21px 17px;
+  max-height: 255px;
+}
+
+.form-column-borders label {
+  padding-bottom: 7px;
+}
+
+.form-column-borders .checkboxes {
+  height: calc(100% - 32px);
+  overflow-y: auto;
+}
+
+.form-column-borders .checkboxes label {
+  font-weight: normal;
+  color: initial;
+  position: relative;
+  display: block;
+  margin: 23px 14px;
+  height: 19px;
+  padding-left: 33px;
+  font-size: 13.5px;
+  line-height: 19px;
+}
+
+.form-column-borders .checkboxes label input[type="checkbox"] {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.form-column-borders .checkboxes label input[type="checkbox"] + .icon {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 0;
+  left: 0;
+  border: 1px solid #E3E3E3;
+  cursor: pointer;
+  color: transparent;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-column-borders .checkboxes label input[type="checkbox"]:checked + .icon {
+  background-color: #04AE00;
+  color: #fff;
+}
+
 .form-wrapper {
   padding: 35px 0;
 }
@@ -983,13 +1077,14 @@ label {
 
 .pagination {
   display: block;
-  padding: 10px 0 35px;
+  padding-bottom: 25px;
 }
 
 .pagination a {
   font-size: 15.5px;
   padding: 10px 12px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .pagination a.active, .pagination a:hover {
@@ -1054,14 +1149,14 @@ label {
 }
 
 .statistics .earnings-chart .tabs {
-  margin-top: 20px;
-  margin-bottom: 55px;
+  margin-top: 30px;
+  margin-bottom: 65px;
 }
 
 .statistics .earnings-chart .tabs .btn {
   padding: 0 18px 0 48px;
   position: relative;
-  margin: 20px;
+  margin: 10px 20px;
 }
 
 .statistics .earnings-chart .tabs .btn .blue,
@@ -1172,6 +1267,79 @@ label {
   display: inline-block;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.postback p {
+  padding: 28px 10px 0;
+}
+
+.postback .postback-row-padding {
+  padding: 5px 7px;
+}
+
+.postback label .not-label {
+  color: red;
+}
+
+.postback .btn {
+  margin: 20px 24px;
+  font-size: 18px;
+}
+
+/*			postback delay chart			*/
+.postback-delay-chart {
+  padding: 23px 2px 70px;
+}
+
+.postback-delay-chart span.value {
+  color: #979797;
+}
+
+.postback-delay-chart span.value.max {
+  float: right;
+}
+
+.postback-delay-chart .timeline {
+  width: 100%;
+  height: 6px;
+  background-color: #E3E3E3;
+  position: relative;
+  margin: 6px 0;
+}
+
+.postback-delay-chart .timeline .timeline-active {
+  position: absolute;
+  width: 62%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #F58220;
+}
+
+.postback-delay-chart .timeline .indicator {
+  position: absolute;
+  width: 74px;
+  top: 12px;
+  left: calc(62% - 37px);
+  margin: 0;
+}
+
+.postback-delay-chart .timeline .indicator .arrow {
+  width: 0;
+  height: 0;
+  border-top: 0;
+  border-bottom: 23px solid #F58220;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  cursor: pointer;
+}
+
+.postback-delay-chart .timeline .indicator .arrow:hover {
+  border-bottom-color: #FFA200;
+}
+
+.postback-delay-chart .timeline .indicator p {
+  padding: 15px 0;
 }
 
 /* Pages / Views */
@@ -1310,29 +1478,32 @@ header ul li:hover {
   background-color: #F3F3F1;
 }
 
+header ul li a {
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header ul li a:hover {
+  color: #979797;
+}
+
 header ul li i {
   padding: 0 20px;
   font-size: 16.5px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
-header ul li.wallet {
+header ul li .wallet {
   font-size: 20px;
   font-weight: 600;
   position: relative;
 }
 
-header ul li.wallet .wallet-dropdown {
-  width: calc(100% + 2px);
-  height: 120px;
-  left: -1px;
-  background: 1px #fff;
-  border: 1px solid #E3E3E3;
-  display: none;
-}
-
-header ul li.wallet:hover .wallet-dropdown {
-  display: block;
+header ul li .wallet .icon-arrow-down-small {
+  font-size: 12px;
 }
 
 header ul li .icon-notification {
