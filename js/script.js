@@ -54,6 +54,5 @@ function openModal(modal) {
 var showLoginModal = document.getElementById('login-button');
 var showQuitModal = document.getElementById('quit-button');
 
-
 showLoginModal.addEventListener('click', function() {openModal('#modal-login')});
 showQuitModal.addEventListener('click', function() {openModal('#modal-quit')});
