@@ -363,9 +363,9 @@ input[type="submit"] { font-size: 18px; }
 
 .modal.login .modal-login-row form input[type="text"], .modal.login .modal-login-row form input[type="password"] { width: 214px; }
 
-.modal.login .modal-login-row form input[type="text"]:-ms-input-placeholder, .modal.login .modal-login-row form input[type="password"]:-ms-input-placeholder { padding-left: 35px; background-position: left center; background-repeat: no-repeat; }
+.modal.login .modal-login-row form input[type="text"]:-ms-input-placeholder, .modal.login .modal-login-row form input[type="password"]:-ms-input-placeholder { padding-left: 29px; background-position: left center; background-repeat: no-repeat; }
 
-.modal.login .modal-login-row form input[type="text"]::placeholder, .modal.login .modal-login-row form input[type="password"]::placeholder { padding-left: 35px; background-position: left center; background-repeat: no-repeat; }
+.modal.login .modal-login-row form input[type="text"]::placeholder, .modal.login .modal-login-row form input[type="password"]::placeholder { padding-left: 29px; background-position: left center; background-repeat: no-repeat; }
 
 .modal.login .modal-login-row form input[type="text"]:-ms-input-placeholder { background-image: url("../images/icons/login.svg"); background-size: 16px auto; }
 
@@ -467,35 +467,65 @@ input[type="submit"] { font-size: 18px; }
 
 .postback-delay-chart .timeline .indicator p { padding: 15px 0; }
 
-.add-banners p, .add-url p { padding: 28px 10px 0; }
+.add-banners p, .add-url p, .chat-manager p { padding: 28px 10px 0; }
 
-.add-banners .postback-row-padding, .add-url .postback-row-padding { padding: 5px 7px; }
+.add-banners .postback-row-padding, .add-url .postback-row-padding, .chat-manager .postback-row-padding { padding: 5px 7px; }
 
-.add-banners .generated-link, .add-url .generated-link { max-width: 755px; display: inline-block; }
+.add-banners .generated-link, .add-url .generated-link, .chat-manager .generated-link { max-width: 755px; display: inline-block; }
 
-.add-banners .btn, .add-url .btn { margin: 0 8px; font-size: 18px; padding: 0 30px; }
+.add-banners .btn, .add-url .btn, .chat-manager .btn { margin: 0 8px; font-size: 18px; padding: 0 30px; }
 
-.add-banners .btn i, .add-url .btn i { color: #fff; font-size: 16px; padding: 0 14px; }
+.add-banners .btn i, .add-url .btn i, .chat-manager .btn i { color: #fff; font-size: 16px; padding: 0 14px; }
 
-.add-banners .btn.btn-disabled, .add-url .btn.btn-disabled { padding-left: 8px; padding-right: 26px; }
+.add-banners .btn.btn-disabled, .add-url .btn.btn-disabled, .chat-manager .btn.btn-disabled { padding-left: 8px; padding-right: 26px; }
 
-.add-banners .form-column-borders, .add-url .form-column-borders { max-height: 405px; }
+.add-banners .form-column-borders, .add-url .form-column-borders, .chat-manager .form-column-borders { max-height: 405px; }
 
-.add-banners .form-column-borders .checkboxes, .add-url .form-column-borders .checkboxes { height: calc(100% - 3px); }
+.add-banners .form-column-borders .checkboxes, .add-url .form-column-borders .checkboxes, .chat-manager .form-column-borders .checkboxes { height: calc(100% - 3px); }
 
-.add-banners .form-column-borders .checkboxes.select-websites label a i, .add-url .form-column-borders .checkboxes.select-websites label a i { position: absolute; top: 14px; right: 14px; padding: 0; display: none; }
+.add-banners .form-column-borders .checkboxes.select-websites label a i, .add-url .form-column-borders .checkboxes.select-websites label a i, .chat-manager .form-column-borders .checkboxes.select-websites label a i { position: absolute; top: 14px; right: 14px; padding: 0; display: none; }
 
-.add-banners .form-column-borders .checkboxes.select-websites label:hover, .add-url .form-column-borders .checkboxes.select-websites label:hover { background-color: #F3F3F1; }
+.add-banners .form-column-borders .checkboxes.select-websites label:hover, .add-url .form-column-borders .checkboxes.select-websites label:hover, .chat-manager .form-column-borders .checkboxes.select-websites label:hover { background-color: #F3F3F1; }
 
-.add-banners .form-column-borders .checkboxes.select-websites label:hover a i, .add-url .form-column-borders .checkboxes.select-websites label:hover a i { display: block; }
+.add-banners .form-column-borders .checkboxes.select-websites label:hover a i, .add-url .form-column-borders .checkboxes.select-websites label:hover a i, .chat-manager .form-column-borders .checkboxes.select-websites label:hover a i { display: block; }
 
-.add-banners .form-column-borders .checkboxes.three-columns, .add-url .form-column-borders .checkboxes.three-columns { column-count: 3; overflow-x: hidden; }
+.add-banners .form-column-borders .checkboxes.three-columns, .add-url .form-column-borders .checkboxes.three-columns, .chat-manager .form-column-borders .checkboxes.three-columns { column-count: 3; overflow-x: hidden; }
 
-.add-banners .form-column-borders .checkboxes.three-columns label:first-child, .add-url .form-column-borders .checkboxes.three-columns label:first-child { margin-top: 0; }
+.add-banners .form-column-borders .checkboxes.three-columns label:first-child, .add-url .form-column-borders .checkboxes.three-columns label:first-child, .chat-manager .form-column-borders .checkboxes.three-columns label:first-child { margin-top: 0; }
 
-.add-banners .form-column-borders .three-columns-label, .add-url .form-column-borders .three-columns-label { margin-bottom: 23px; }
+.add-banners .bottom-column, .add-url .bottom-column, .chat-manager .bottom-column { padding: 15px 10px 17px; }
 
-.add-banners .bottom-column, .add-url .bottom-column { padding: 15px 10px 17px; }
+.chat-manager .managers-photo { width: auto; height: 70px; border-radius: 50%; display: inline-block; vertical-align: middle; margin: 10px 12px 10px 17px; }
+
+.chat-manager .manager-wrapper { display: inline-block; vertical-align: middle; }
+
+.chat-manager .manager-wrapper h3 { margin: 0; font-size: 30px; color: #333; }
+
+.chat-manager .manager-wrapper .online-marker { display: inline-block; font-size: 11px; padding: 3px 5px; color: #fff; background-color: #04AE00; border-radius: 3px; margin-top: 3px; margin-left: 2px; }
+
+.chat-manager .chat-container { width: 100%; height: 320px; border-top: 1px solid #F3F3F1; border-bottom: 1px solid #F3F3F1; padding-top: 7.5px; padding-bottom: 8px; }
+
+.chat-manager .chat-container .message-wrapper { margin: 0 17px; overflow-x: hidden; float: left; clear: left; }
+
+.chat-manager .chat-container .message-wrapper p { padding: 13px; border-radius: 3px; margin: 8px 0; float: left; clear: left; position: relative; }
+
+.chat-manager .chat-container .message-wrapper p.managers-message { background-color: #F3F3F1; }
+
+.chat-manager .chat-container .message-wrapper p.managers-message::after { position: absolute; top: -4px; left: -5px; background-color: #F3F3F1; width: 10px; height: 10px; content: ""; transform: rotate(45deg); }
+
+.chat-manager .chat-container .message-wrapper p.customers-message { color: #fff; background-color: #BABABA; }
+
+.chat-manager .chat-container .message-wrapper p.customers-message::after { position: absolute; bottom: -4px; right: -5px; background-color: #BABABA; width: 10px; height: 10px; content: ""; transform: rotate(45deg); }
+
+.chat-manager input { display: inline-block; vertical-align: middle; }
+
+.chat-manager input[type="text"] { max-width: 920px; }
+
+.chat-manager input[type="text"]:-ms-input-placeholder { padding-left: 29px; background-position: left center; background-repeat: no-repeat; background-image: url("../images/icons/message.svg"); background-size: 16px auto; }
+
+.chat-manager input[type="text"]::placeholder { padding-left: 29px; background-position: left center; background-repeat: no-repeat; background-image: url("../images/icons/message.svg"); background-size: 16px auto; }
+
+.chat-manager input[type="submit"] { width: auto; margin: 0 0 0 16px; }
 
 @media (max-width: 767px) { .add-url .form-column-borders .checkboxes.three-columns { column-count: 1; overflow: auto; } }
 
