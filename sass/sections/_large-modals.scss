@@ -37,6 +37,27 @@
 		.checkboxes {
 			height: calc(100% - 3px);
 
+			&.select-websites {
+
+				label {
+					a i {
+						position: absolute;
+						top: 14px;
+						right: 14px;
+						padding: 0;					
+						display: none;
+					}
+				}
+
+				label:hover {
+					background-color: $background-main-color;
+
+					a i {
+						display: block;
+					}
+				}
+			}
+
 			&.three-columns {
 				column-count: 3;
 				overflow-x: hidden;
