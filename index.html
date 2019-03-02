@@ -108,15 +108,8 @@
 													<div class="row">
 														<div class="col-sm-12">
 															<h3>Earnings chart</h3>
-															<div class="chart">
-																<div class="tabs">
-																	<div class="btn btn-color-tab"><div class="blue"></div>Signups</div>
-																	<div class="btn btn-color-tab"><div class="orange"></div>FTD</div>
-																	<div class="btn btn-color-tab"><div class="green"></div>Earned</div>
-																</div>
-																<div class="chart-container">
-																	<img src="./images/general-chart.png" alt="General chart">
-																</div>
+															<div class="chart-container">
+																<canvas id="myChart"></canvas>
 															</div>
 														</div>
 													</div>
@@ -360,7 +353,7 @@
 					</div>
 					<img src="http://placehold.it/100x100" alt="Manager's photo" class="managers-photo">
 					<div class="manager-wrapper">
-						<h3>Michael E.</h3>
+						<h3>Mikhael E.</h3>
 						<div class="online-marker">online</div>
 					</div>
 					<div class="chat-container">
@@ -389,7 +382,9 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/script-links.js"></script>
+		<script src="js/script-chart.js"></script>
 	</body>
 </html>
